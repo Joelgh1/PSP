@@ -17,9 +17,12 @@ class Ut01Ex01Activity : AppCompatActivity() {
         Thread{
             Thread.sleep(2000)
             runOnUiThread{
-                label.text = "Cambiado!"
+                label.text = getString(R.string.cambiado)
             }
             Log.d("@dev", "Thread1")
-        }
+        }.start()
+
     }
+
+
 }

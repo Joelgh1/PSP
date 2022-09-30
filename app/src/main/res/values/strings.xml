@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PSP-2022</string>
     <string name="title">Hola Mundo!</string>
+    <string name="cambiado">Cambio</string>
 </resources>
