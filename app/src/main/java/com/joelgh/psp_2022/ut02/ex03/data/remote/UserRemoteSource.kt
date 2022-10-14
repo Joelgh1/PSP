@@ -21,7 +21,8 @@ class UserRemoteSource {
     private fun buildApiEndPoints() = buildClient().create(ApiEndPoints::class.java)
 
     fun getUsers(): List<UserApiModel>{
-        val response = apiEndPoints.getUsers().execute()
+        val call = apiEndPoints.getUsers()
+        val response = call.execute()
 
         return if(response.isSuccessful){
             val users = response.body()
@@ -32,7 +33,8 @@ class UserRemoteSource {
     }
 
     fun getUser(userId: Int): UserApiModel?{
-        val response = apiEndPoints.getUser(userId).execute()
+        val call = apiEndPoints.getUser(userId)
+        val response = call.execute()
 
         return if(response.isSuccessful){
             response.body()

@@ -11,6 +11,6 @@ interface ApiEndPoints {
     fun getUsers(): Call<List<UserApiModel>>
 
     @GET("users/{userId}")
-    fun getUser(@Path("userId")userId: Int): Call<UserApiModel>
+    fun getUser(@Path("userId") userId: Int): Call<UserApiModel>
 
 }
